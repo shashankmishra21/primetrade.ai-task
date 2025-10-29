@@ -5,7 +5,7 @@
     "description": "REST API with JWT Authentication and Role-Based Access Control",
     "version": "1.0.0"
   },
-  "host": "localhost:5000",
+  "host": "primetrade-ai-task.onrender.com",
   "basePath": "/",
   "tags": [
     {
@@ -22,7 +22,7 @@
     }
   ],
   "schemes": [
-    "http"
+    "https"
   ],
   "securityDefinitions": {
     "bearerAuth": {
@@ -373,11 +373,11 @@
         },
         "email": {
           "type": "string",
-          "example": "user@example.com"
+          "example": "Shashank@gmail.com"
         },
         "name": {
           "type": "string",
-          "example": "John Doe"
+          "example": "Shashank"
         },
         "role": {
           "type": "string",

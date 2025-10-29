@@ -12,8 +12,10 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://primetrade-ai-task.vercel.app/',
-  credentials: true
+  origin: ['https://primetrade-ai-task.vercel.app', 'http://localhost:3000'], // Multiple origins
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
@@ -49,6 +51,6 @@ app.use((err, req, res, next) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log(`API Docs: http://localhost:${PORT}/api-docs`);
+  console.log(`Server running on port ${PORT}`);
+  console.log(`API Docs: https://primetrade-ai-task.onrender.com/api-docs`);
 });

@@ -6,9 +6,9 @@ const doc = {
     description: 'REST API with JWT Authentication and Role-Based Access Control',
     version: '1.0.0'
   },
-  host: 'https://primetrade-ai-task.onrender.com/',
+  host: 'primetrade-ai-task.onrender.com',
   basePath: '/',
-  schemes: ['http'],
+  schemes: ['https'],
   consumes: ['application/json'],
   produces: ['application/json'],
   
