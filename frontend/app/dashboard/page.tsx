@@ -103,6 +103,7 @@ export default function Dashboard() {
   const totalTasks = tasks.length;
   const completedTasks = tasks.filter((t: any) => t.status === 'COMPLETED').length;
   const inProgressTasks = tasks.filter((t: any) => t.status === 'IN_PROGRESS').length;
+  const pendingTasks = tasks.filter((t: any) => t.status === 'PENDING').length;
 
   return (
     <div className="min-h-screen bg-black text-gray-100">
@@ -142,7 +143,7 @@ export default function Dashboard() {
           </div>
 
           <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition text-center">
-            <h3 className="text-3xl font-bold text-gray-400 mb-2">{inProgressTasks}</h3>
+            <h3 className="text-3xl font-bold text-gray-400 mb-2">{pendingTasks}</h3>
             <p className="text-sm text-gray-400">Pending</p>
           </div>
 
@@ -199,8 +200,8 @@ export default function Dashboard() {
                   >
                     <div className="flex items-start gap-4">
                       <div className={`w-2 h-2 rounded-full mt-2 flex-shrink-0 ${task.status === 'COMPLETED' ? 'bg-green-400' :
-                          task.status === 'IN_PROGRESS' ? 'bg-yellow-400' :
-                            'bg-gray-500'
+                        task.status === 'IN_PROGRESS' ? 'bg-yellow-400' :
+                          'bg-gray-500'
                         }`}></div>
 
                       <div className="flex-1 min-w-0">
@@ -212,12 +213,12 @@ export default function Dashboard() {
                         </p>
                         <div className="flex items-center gap-2">
                           <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium ${task.status === 'COMPLETED' ? 'bg-green-900/50 text-green-400 border border-green-800' :
-                              task.status === 'IN_PROGRESS' ? 'bg-yellow-900/50 text-yellow-400 border border-yellow-800' :
-                                'bg-gray-700 text-gray-300 border border-gray-600'
+                            task.status === 'IN_PROGRESS' ? 'bg-yellow-900/50 text-yellow-400 border border-yellow-800' :
+                              'bg-gray-700 text-gray-300 border border-gray-600'
                             }`}>
                             <span className={`w-1.5 h-1.5 rounded-full ${task.status === 'COMPLETED' ? 'bg-green-400' :
-                                task.status === 'IN_PROGRESS' ? 'bg-yellow-400' :
-                                  'bg-gray-400'
+                              task.status === 'IN_PROGRESS' ? 'bg-yellow-400' :
+                                'bg-gray-400'
                               }`}></span>
                             {task.status.replace('_', ' ')}
                           </span>
