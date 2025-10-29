@@ -4,7 +4,9 @@ Full-stack task management application with JWT authentication and role-based ac
 ## 🚀 Live Demo
 
 **Frontend:** https://primetrade-ai-task.vercel.app
+
 **Backend API:** https://primetrade-ai-task.onrender.com
+
 **API Documentation:** https://primetrade-ai-task.onrender.com/api-docs
 
 ## Demo Credentials
@@ -50,22 +52,24 @@ Full-stack task management application with JWT authentication and role-based ac
 ## 🚀 Quick Start
 
 ### Backend Setup
-cd backend
-npm install
-cp .env.example .env
-Edit .env with your database URL and JWT secret
-npx prisma migrate dev
-npx prisma db seed
-npm run swagger
-npm run dev
+- cd backend
+- npm install
+- cp .env.example .env
+- Edit .env with your database URL and JWT secret
+- npx prisma migrate dev
+- npx prisma db seed
+- npm run swagger
+- npm run dev
+
 **Backend runs on: http://localhost:5000**
 
 ### Frontend Setup
-cd frontend
-npm install
-Create .env.local with:
-NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
-npm run dev
+- cd frontend
+- npm install
+- Create .env.local with:
+- NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
+- npm run dev
+
 **Frontend runs on: http://localhost:3000**
 
 - **API Docs: https://primetrade-ai-task.onrender.com/api-docs**
