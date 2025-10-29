@@ -6,7 +6,7 @@ const doc = {
     description: 'REST API with JWT Authentication and Role-Based Access Control',
     version: '1.0.0'
   },
-  host: 'localhost:5000',
+  host: 'https://primetrade-ai-task.onrender.com/',
   basePath: '/',
   schemes: ['http'],
   consumes: ['application/json'],
@@ -31,8 +31,8 @@ const doc = {
   definitions: {
     User: {
       id: 1,
-      email: 'user@example.com',
-      name: 'John Doe',
+      email: 'Shashank@gmail.com',
+      name: 'Shashank',
       role: 'USER'
     },
     Task: {
@@ -56,7 +56,7 @@ swaggerAutogen(outputFile, routes, doc).then(async () => {
   const fs = require('fs');
   const swaggerFile = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
   
-  // Add security to all /api/v1/tasks/* routes
+  // Add security to all task and admin routes
   Object.keys(swaggerFile.paths).forEach(path => {
     if (path.includes('/api/v1/tasks') || path.includes('/api/v1/admin')) {
       Object.keys(swaggerFile.paths[path]).forEach(method => {
