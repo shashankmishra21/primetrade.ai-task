@@ -2,13 +2,13 @@
 
 REST API with JWT Authentication and Role-Based Access Control.
 
-## 🚀 Quick Links
+## Quick Links
 
 - **Live API:** https://primetrade-ai-task.onrender.com
 - **Swagger Docs:** https://primetrade-ai-task.onrender.com/api-docs
 - **Frontend:** https://primetrade-ai-task.vercel.app
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### Authentication
 - `POST /api/v1/auth/register` - Register user
@@ -42,7 +42,7 @@ Monolithic REST API with PostgreSQL database, stateless JWT authentication, depl
 
 ### Scaling Strategy
 
-#### 1. **Horizontal Scaling (Load Balancing)**[web:150][web:154]
+#### 1. **Horizontal Scaling (Load Balancing)**
 
 Deploy multiple API instances behind a load balancer (Nginx/AWS ALB) to distribute traffic:
 
@@ -57,7 +57,7 @@ Client → Load Balancer → [API Instance 1, Instance 2, Instance 3] → Databa
 
 **Implementation:** AWS Auto Scaling or Render's horizontal scaling
 
-#### 2. **Caching with Redis**[web:154][web:168]
+#### 2. **Caching with Redis**
 
 Reduce database queries by 60-70% with intelligent caching:
 
@@ -72,7 +72,7 @@ return tasks;
 
 **Cache invalidation:** Clear cache on create/update/delete operations
 
-#### 3. **Database Optimization**[web:150][web:154]
+#### 3. **Database Optimization**
 
 **Read Replicas:**
 - Master database: Handles writes (POST, PUT, DELETE)
@@ -86,7 +86,7 @@ CREATE INDEX idx_tasks_status ON Task(status);
 CREATE INDEX idx_users_email ON User(email);
 
 
-#### 4. **Microservices Architecture**[web:154][web:169]
+#### 4. **Microservices Architecture**
 
 Break monolith into independent services:
 
@@ -107,7 +107,7 @@ API Gateway
 - Technology flexibility per service
 - Fault isolation (one service failure doesn't affect others)
 
-#### 5. **Rate Limiting & API Gateway**[web:154][web:168]
+#### 5. **Rate Limiting & API Gateway**
 
 Prevent abuse and protect backend:
 
@@ -127,7 +127,7 @@ message: 'Too many requests'
 
 **Tools:** Kong, AWS API Gateway, Nginx
 
-#### 6. **Asynchronous Processing**[web:154][web:170]
+#### 6. **Asynchronous Processing**
 
 Handle long-running tasks without blocking API:
 
@@ -138,7 +138,7 @@ Handle long-running tasks without blocking API:
 
 **Tools:** RabbitMQ, AWS SQS, Redis Queue
 
-#### 7. **Monitoring & Observability**[web:168][web:170]
+#### 7. **Monitoring & Observability**
 
 Track performance and identify bottlenecks:
 
@@ -165,11 +165,11 @@ Track performance and identify bottlenecks:
 - Event-driven architecture
 - Kubernetes orchestration
 
-## 👤 Author
+## Author
 
 **Shashank Mishra**  
 
-## 📄 License
+## License
 
 MIT
 
