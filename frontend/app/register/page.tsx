@@ -68,6 +68,7 @@ export default function Register() {
 
           <div>
             <label className="block text-sm font-medium mb-1.5 text-gray-300">Password</label>
+            <p>password must be 6 characters long</p>
             <input
               type="password"
               required
